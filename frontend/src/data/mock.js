@@ -33,7 +33,8 @@ export const siteData = {
     audienceLabel: "FOR FOUNDERS & BUILDERS",
     title: "Makerspace",
     subtitle: "Community Event Initiative",
-    description: "A paid, limited-capacity event for founders and builders who lack access to safe product validation, honest feedback, and foundational knowledge around funding and go-to-market strategies.",
+    description: "A limited-capacity community event for founders and builders who lack access to safe product validation, honest feedback, and foundational knowledge around building, positioning, and launching early-stage products.",
+    supportingLine: "Through structured mentorship, pitch refinement, MVP support, and investor-facing sessions, selected teams gain the opportunity to present their work, receive investor feedback, and be considered for potential funding or follow-up conversations.",
     features: [
       "Product validation & MVP testing",
       "Honest feedback loops",
