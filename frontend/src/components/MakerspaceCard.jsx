@@ -39,10 +39,18 @@ export const MakerspaceCard = () => {
         
         {/* Description */}
         <p 
-          className="text-body mb-6"
+          className="text-body mb-4"
           style={{ color: 'var(--text-secondary)' }}
         >
           {makerspace.description}
+        </p>
+        
+        {/* Supporting Line */}
+        <p 
+          className="text-body mb-6"
+          style={{ color: 'var(--text-secondary)' }}
+        >
+          {makerspace.supportingLine}
         </p>
         
         {/* Features */}
