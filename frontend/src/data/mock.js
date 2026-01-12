@@ -1,0 +1,58 @@
+export const siteData = {
+  brand: {
+    name: "IntegrityLabs",
+    tagline: "Bridging the gap between education and industry"
+  },
+  
+  integrityLabs: {
+    audienceLabel: "FOR STUDENTS",
+    title: "IntegrityLabs",
+    subtitle: "Industry-Aligned Upskilling",
+    description: "Guided upskilling through live, mentor-led industry projects. Work on real problems, build portfolio-ready work, and bridge the gap between classroom learning and professional skills.",
+    domains: [
+      "VLSI Design",
+      "Cybersecurity",
+      "AI/ML"
+    ],
+    highlights: [
+      "Real industry projects with experienced mentors",
+      "Resume-ready outcomes and tangible skills",
+      "Direct skill-to-industry pathway"
+    ],
+    primaryCta: {
+      text: "Apply Now",
+      href: "#apply"
+    },
+    secondaryCta: {
+      text: "Explore Domains",
+      href: "#domains"
+    }
+  },
+  
+  makerspace: {
+    audienceLabel: "FOR FOUNDERS & BUILDERS",
+    title: "Makerspace",
+    subtitle: "Community Event Initiative",
+    description: "A paid, limited-capacity event for founders and builders who lack access to safe product validation, honest feedback, and foundational knowledge around funding and go-to-market strategies.",
+    features: [
+      "Product validation & MVP testing",
+      "Honest feedback loops",
+      "Funding fundamentals",
+      "Go-to-market guidance"
+    ],
+    highlights: [
+      "Designed for tier-2, tier-3, and emerging ecosystems",
+      "Limited capacity for quality outcomes",
+      "Safe space for experimentation"
+    ],
+    primaryCta: {
+      text: "Explore Makerspace Event",
+      href: "#makerspace"
+    }
+  },
+  
+  footer: {
+    copyright: "© 2025 IntegrityLabs. All rights reserved.",
+    tagline: "Building skills that matter."
+  }
+};
