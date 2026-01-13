@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { siteData } from '../data/mock';
 
-export const HeroSection = () => {
+export const HeroSection = ({ onCtaClick }) => {
   const { hero } = siteData;
   
   return (
@@ -36,11 +36,14 @@ export const HeroSection = () => {
           ))}
         </div>
         
-        {/* Primary CTA */}
-        <a href={hero.primaryCta.href} className="btn-primary inline-flex">
+        {/* Primary CTA - Opens Modal */}
+        <button 
+          onClick={onCtaClick}
+          className="btn-primary inline-flex"
+        >
           {hero.primaryCta.text}
           <ArrowRight size={18} />
-        </a>
+        </button>
       </div>
     </section>
   );
