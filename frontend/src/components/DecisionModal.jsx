@@ -34,7 +34,20 @@ export const DecisionModal = ({ isOpen, onClose, onSelectStudent, onSelectMakers
           </p>
           <button 
             onClick={onSelectStudent}
-            className="btn-primary w-full"
+            className="w-full px-6 py-4 text-base font-semibold flex items-center justify-center gap-2 transition-all duration-300"
+            style={{ 
+              backgroundColor: 'var(--bg-primary)',
+              color: 'var(--accent-primary)',
+              border: '1px solid rgba(24, 198, 232, 0.3)'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = '0 0 20px rgba(24, 198, 232, 0.2)';
+              e.currentTarget.style.borderColor = 'rgba(24, 198, 232, 0.6)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = 'none';
+              e.currentTarget.style.borderColor = 'rgba(24, 198, 232, 0.3)';
+            }}
           >
             Explore Student Community
             <ArrowRight size={18} />
