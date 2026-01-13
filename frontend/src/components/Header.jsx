@@ -13,12 +13,18 @@ export const Header = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <span 
-              className="text-xl md:text-2xl font-bold"
-              style={{ color: 'var(--accent-primary)' }}
-            >
-              {siteData.brand.name}
+          <div className="flex items-center gap-1">
+            <span className="text-xl md:text-2xl font-bold">
+              <span style={{ color: 'var(--text-primary)' }}>The </span>
+              <span 
+                style={{ 
+                  color: 'var(--accent-primary)',
+                  textShadow: '0 0 20px rgba(24, 198, 232, 0.4)'
+                }}
+              >
+                Integrity
+              </span>
+              <span style={{ color: 'var(--text-primary)' }}>Labs</span>
             </span>
           </div>
           
