@@ -20,8 +20,8 @@ export const siteData = {
       "Direct skill-to-industry pathway"
     ],
     primaryCta: {
-      text: "Apply Now",
-      href: "#apply"
+      text: "How The IntegrityLabs Works",
+      href: "#how-it-works"
     },
     secondaryCta: {
       text: "Explore Domains",
