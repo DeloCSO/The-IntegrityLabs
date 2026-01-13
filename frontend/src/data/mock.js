@@ -1,60 +1,99 @@
 export const siteData = {
   brand: {
     name: "The IntegrityLabs",
-    tagline: "Bridging the gap between education and industry"
   },
   
-  integrityLabs: {
-    audienceLabel: "FOR STUDENTS",
-    title: "The IntegrityLabs",
-    subtitle: "Industry-Aligned Upskilling",
-    description: "Guided upskilling through live, mentor-led industry projects. Work on real problems, build portfolio-ready work, and bridge the gap between classroom learning and professional skills.",
-    domains: [
-      "VLSI Design",
-      "Cybersecurity",
-      "AI/ML"
-    ],
-    highlights: [
-      "Real industry projects with experienced mentors",
-      "Resume-ready outcomes and tangible skills",
-      "Direct skill-to-industry pathway"
-    ],
+  hero: {
+    headline: "Building skills that matter",
+    supportingLine: "Bridging textbook theory and industry reality.",
+    description: "Most students sense something is missing — classroom learning doesn't reflect real work, and meaningful guidance is hard to find. The IntegrityLabs is a focused community built for students who want to understand how skills actually translate in the real world.\n\nWe're building a space where conversations come before commitments, clarity comes before specialization, and learning happens through interaction — not noise. If you're curious about how real skills are built, you're in the right place.",
     primaryCta: {
-      text: "How The IntegrityLabs Works",
-      href: "#how-it-works"
-    },
-    secondaryCta: {
-      text: "Explore Domains",
-      href: "#domains"
+      text: "See what we're building",
+      href: "#the-integritylabs"
     }
   },
   
+  theIntegrityLabs: {
+    title: "The IntegrityLabs",
+    content: "The IntegrityLabs is a student-focused community designed to bridge academic learning with industry reality. It brings together students and experienced professionals to explore real-world skills through conversation, guided projects, and shared learning — without hype or transactional pressure.",
+    bullets: [
+      "One shared space for serious learners",
+      "Conversations before commitments",
+      "Tracks aligned to real industry workflows",
+      "Mentors as guides, not influencers"
+    ]
+  },
+  
+  howItWorks: {
+    title: "How The IntegrityLabs Community Works",
+    steps: [
+      {
+        step: "Step 1",
+        title: "Enter the Community",
+        description: "Students step into a focused space designed for discussion, exploration, and clarity around real-world skills."
+      },
+      {
+        step: "Step 2",
+        title: "Explore Tracks",
+        description: "Members explore different tracks — VLSI, Cybersecurity, and AI / ML — through conversations, mentor insights, and shared resources."
+      },
+      {
+        step: "Step 3",
+        title: "Opt Into Depth",
+        description: "As interests become clearer, students can opt into mentor-led projects and structured learning experiences within specific tracks."
+      },
+      {
+        step: "Step 4",
+        title: "Build & Grow",
+        description: "Members work on real projects, receive feedback, and build outcomes they can confidently talk about and showcase."
+      }
+    ],
+    trustLine: "There is no pressure to commit early. Depth follows clarity."
+  },
+  
+  communityTracks: {
+    title: "Community Tracks",
+    tracks: [
+      {
+        name: "VLSI Track",
+        description: "Industry-aligned discussions and projects focused on real semiconductor and hardware design workflows."
+      },
+      {
+        name: "Cybersecurity Track",
+        description: "Hands-on exploration of security concepts, real-world scenarios, and professional security thinking."
+      },
+      {
+        name: "AI / ML Track",
+        description: "Applied discussions and projects centered around data, models, and deployment — grounded in real problem statements."
+      }
+    ]
+  },
+  
   makerspace: {
-    audienceLabel: "FOR FOUNDERS & BUILDERS",
-    title: "Makerspace",
-    titleFull: "Makerspace — by The IntegrityLabs",
-    subtitle: "Community Event Initiative",
-    description: "A limited-capacity community event for founders and builders who lack access to safe product validation, honest feedback, and foundational knowledge around building, positioning, and launching early-stage products.",
-    supportingLine: "Through structured mentorship, pitch refinement, MVP support, and investor-facing sessions, selected teams gain the opportunity to present their work, receive investor feedback, and be considered for potential funding or follow-up conversations.",
-    features: [
-      "Product validation & MVP testing",
-      "Honest feedback loops",
-      "Funding fundamentals",
-      "Go-to-market guidance"
+    title: "Makerspace — by The IntegrityLabs",
+    description: "Makerspace is a focused initiative for founders and builders who want to validate ideas, refine products, and receive honest, structured feedback in a serious, distraction-free environment.",
+    pillars: [
+      {
+        title: "Product Validation",
+        description: "Validate ideas and MVPs through guided reviews, structured feedback, and real-world perspectives from mentors and peers."
+      },
+      {
+        title: "Mentorship & Pitch Readiness",
+        description: "Refine product positioning, storytelling, and pitch decks through mentorship sessions and simulated investor interactions."
+      },
+      {
+        title: "Investor Exposure",
+        description: "Selected teams gain opportunities to present their work, receive investor feedback, and be considered for follow-up conversations or funding pathways."
+      }
     ],
-    highlights: [
-      "Designed for tier-2, tier-3, and emerging ecosystems",
-      "Limited capacity for quality outcomes",
-      "Safe space for experimentation"
-    ],
-    primaryCta: {
-      text: "Explore Makerspace Event",
+    clarityLine: "Funding is not guaranteed. The focus is on preparation, validation, and access.",
+    cta: {
+      text: "Explore Makerspace",
       href: "#makerspace"
     }
   },
   
   footer: {
-    copyright: "© 2026 The IntegrityLabs. All rights reserved.",
-    tagline: "Building skills that matter."
+    copyright: "© 2026 The IntegrityLabs. All rights reserved."
   }
 };
