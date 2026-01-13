@@ -1,6 +1,10 @@
 import React from 'react';
 import { Header } from '../components/Header';
 import { HeroSection } from '../components/HeroSection';
+import { TheIntegrityLabsSection } from '../components/TheIntegrityLabsSection';
+import { HowItWorksSection } from '../components/HowItWorksSection';
+import { CommunityTracksSection } from '../components/CommunityTracksSection';
+import { MakerspaceSection } from '../components/MakerspaceSection';
 import { Footer } from '../components/Footer';
 
 const LandingPage = () => {
@@ -12,6 +16,10 @@ const LandingPage = () => {
       <Header />
       <main className="flex-grow">
         <HeroSection />
+        <TheIntegrityLabsSection />
+        <HowItWorksSection />
+        <CommunityTracksSection />
+        <MakerspaceSection />
       </main>
       <Footer />
     </div>
