@@ -22,11 +22,17 @@ export const IntegrityLabsCard = () => {
       >
         {/* Header */}
         <div className="mb-6">
-          <h2 
-            className="text-heading mb-2"
-            style={{ color: 'var(--text-primary)' }}
-          >
-            {integrityLabs.title}
+          <h2 className="text-heading mb-2">
+            <span style={{ color: 'var(--text-primary)' }}>The </span>
+            <span 
+              style={{ 
+                color: 'var(--accent-primary)',
+                textShadow: '0 0 20px rgba(24, 198, 232, 0.4)'
+              }}
+            >
+              Integrity
+            </span>
+            <span style={{ color: 'var(--text-primary)' }}>Labs</span>
           </h2>
           <p 
             className="text-body-lg font-medium"
