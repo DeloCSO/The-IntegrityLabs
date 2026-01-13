@@ -54,7 +54,7 @@ export const siteData = {
   },
   
   footer: {
-    copyright: "© 2025 IntegrityLabs. All rights reserved.",
+    copyright: "© 2026 The IntegrityLabs. All rights reserved.",
     tagline: "Building skills that matter."
   }
 };
