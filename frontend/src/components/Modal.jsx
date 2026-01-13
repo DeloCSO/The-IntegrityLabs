@@ -4,14 +4,22 @@ import { X, ArrowLeft } from 'lucide-react';
 export const Modal = ({ isOpen, onClose, onBack, title, children, showBack = false }) => {
   if (!isOpen) return null;
   
+  // Handle backdrop click
+  const handleBackdropClick = (e) => {
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  };
+  
   return (
     <div 
-      className="fixed inset-0 z-50 flex items-center justify-center"
+      className="fixed inset-0 z-50 flex items-center justify-center px-4"
       style={{ backgroundColor: 'rgba(5, 11, 16, 0.95)' }}
+      onClick={handleBackdropClick}
     >
       {/* Modal Container */}
       <div 
-        className="relative w-full max-w-4xl max-h-[90vh] mx-4 overflow-hidden flex flex-col"
+        className="relative w-full max-w-4xl max-h-[90vh] overflow-hidden flex flex-col"
         style={{ 
           backgroundColor: 'var(--bg-surface)',
           border: '1px solid var(--border-color)'
