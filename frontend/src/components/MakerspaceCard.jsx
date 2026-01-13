@@ -27,7 +27,7 @@ export const MakerspaceCard = () => {
             className="text-heading mb-2"
             style={{ color: 'var(--text-primary)' }}
           >
-            {makerspace.title}
+            {makerspace.titleFull}
           </h2>
           <p 
             className="text-body-lg font-medium"
