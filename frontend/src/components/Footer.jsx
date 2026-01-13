@@ -13,7 +13,7 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Brand */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1">
             <span className="text-lg font-bold">
               <span style={{ color: 'var(--text-primary)' }}>The </span>
               <span 
@@ -25,12 +25,6 @@ export const Footer = () => {
                 Integrity
               </span>
               <span style={{ color: 'var(--text-primary)' }}>Labs</span>
-            </span>
-            <span 
-              className="text-sm"
-              style={{ color: 'var(--text-muted)' }}
-            >
-              — {siteData.footer.tagline}
             </span>
           </div>
           
