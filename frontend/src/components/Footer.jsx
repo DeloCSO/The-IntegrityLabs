@@ -14,11 +14,17 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Brand */}
           <div className="flex items-center gap-2">
-            <span 
-              className="text-lg font-bold"
-              style={{ color: 'var(--accent-primary)' }}
-            >
-              {siteData.brand.name}
+            <span className="text-lg font-bold">
+              <span style={{ color: 'var(--text-primary)' }}>The </span>
+              <span 
+                style={{ 
+                  color: 'var(--accent-primary)',
+                  textShadow: '0 0 15px rgba(24, 198, 232, 0.3)'
+                }}
+              >
+                Integrity
+              </span>
+              <span style={{ color: 'var(--text-primary)' }}>Labs</span>
             </span>
             <span 
               className="text-sm"
