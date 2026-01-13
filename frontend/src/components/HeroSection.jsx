@@ -12,11 +12,17 @@ export const HeroSection = () => {
       <div className="max-w-7xl mx-auto">
         {/* Hero Header */}
         <div className="text-center mb-12 md:mb-16">
-          <h1 
-            className="text-display mb-4"
-            style={{ color: 'var(--text-primary)' }}
-          >
-            {siteData.brand.name}
+          <h1 className="text-display mb-4">
+            <span style={{ color: 'var(--text-primary)' }}>The </span>
+            <span 
+              style={{ 
+                color: 'var(--accent-primary)',
+                textShadow: '0 0 30px rgba(24, 198, 232, 0.5)'
+              }}
+            >
+              Integrity
+            </span>
+            <span style={{ color: 'var(--text-primary)' }}>Labs</span>
           </h1>
           <p 
             className="text-body-lg max-w-2xl mx-auto"
