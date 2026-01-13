@@ -1,12 +1,12 @@
 export const siteData = {
   brand: {
-    name: "IntegrityLabs",
+    name: "The IntegrityLabs",
     tagline: "Bridging the gap between education and industry"
   },
   
   integrityLabs: {
     audienceLabel: "FOR STUDENTS",
-    title: "IntegrityLabs",
+    title: "The IntegrityLabs",
     subtitle: "Industry-Aligned Upskilling",
     description: "Guided upskilling through live, mentor-led industry projects. Work on real problems, build portfolio-ready work, and bridge the gap between classroom learning and professional skills.",
     domains: [
