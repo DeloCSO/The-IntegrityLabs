@@ -1,8 +1,9 @@
 import React from 'react';
+import { ArrowRight } from 'lucide-react';
 import { Modal } from './Modal';
 import { siteData } from '../data/mock';
 
-export const StudentCommunityModal = ({ isOpen, onClose, onBack }) => {
+export const StudentCommunityModal = ({ isOpen, onClose, onBack, onApply }) => {
   const { theIntegrityLabs, howItWorks, communityTracks } = siteData;
   
   return (
