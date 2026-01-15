@@ -139,6 +139,23 @@ export const StudentCommunityModal = ({ isOpen, onClose, onBack, onApply }) => {
             ))}
           </div>
         </section>
+        
+        {/* Apply CTA */}
+        <div className="pt-6 mt-4" style={{ borderTop: '1px solid var(--border-color)' }}>
+          <button
+            onClick={onApply}
+            className="w-full px-6 py-4 text-base font-semibold flex items-center justify-center gap-2 transition-colors duration-300"
+            style={{ 
+              backgroundColor: 'var(--accent-primary)',
+              color: 'var(--bg-primary)'
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#20d4f5'}
+            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--accent-primary)'}
+          >
+            Apply to Student Community
+            <ArrowRight size={18} />
+          </button>
+        </div>
       </div>
     </Modal>
   );
