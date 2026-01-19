@@ -64,7 +64,7 @@ export const StudentCommunityModal = ({ isOpen, onClose, onBack, onApply }) => {
           </p>
           <ul className="space-y-3">
             {[
-              'Talk to mentors and professionals who've worked in the field',
+              "Talk to mentors and professionals who've worked in the field",
               'Get direction on what to learn and what to ignore',
               'Access curated resources and real-world perspectives',
               'Explore whether working on a project together even makes sense'
