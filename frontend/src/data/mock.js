@@ -4,9 +4,9 @@ export const siteData = {
   },
   
   hero: {
-    headline: "Building skills that matter",
-    supportingLine: "Bridging textbook theory and industry reality.",
-    description: "At some point, most people realize that learning and building don't work the way they're supposed to. You can study a lot, build a lot, and still feel unsure about what actually matters in the real world.\n\nThe IntegrityLabs started from that frustration. We didn't want another noisy platform or surface-level networking space. We wanted a place where people could slow down, ask better questions, learn from those a little ahead of them, and work on things that actually mean something.\n\nIf you're trying to understand how real skills are built — or you're building something and want honest input — you're probably in the right place.",
+    headline: "A space for people who build and learn seriously",
+    supportingLine: "For students seeking clarity. For founders seeking honesty.",
+    description: "The IntegrityLabs is a small, focused environment where students can talk to people who've actually done the work — and where founders can get real feedback without the noise.\n\nWe're not a course platform. We're not a networking community. We exist because most spaces meant to help people grow are either too crowded, too transactional, or too shallow to be useful.",
     primaryCta: {
       text: "See what we're building",
       href: "#the-integritylabs"
