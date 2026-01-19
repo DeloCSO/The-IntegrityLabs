@@ -99,7 +99,6 @@ const LandingPage = () => {
         isOpen={activeModal === 'makerspace'}
         onClose={handleHomeClick}
         onBack={handleBackToDecision}
-        onApply={handleApplyMakerspace}
       />
       
       {/* Apply Modal */}
