@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { LoginModal } from './LoginModal';
+import { AuthModal } from './AuthModal';
 
 export const Header = () => {
   const location = useLocation();
   const { user, loading, signOut } = useAuth();
-  const [loginModalOpen, setLoginModalOpen] = useState(false);
+  const [authModalOpen, setAuthModalOpen] = useState(false);
 
   const handleLogout = async () => {
     await signOut();
@@ -102,7 +102,7 @@ export const Header = () => {
                   </button>
                 ) : (
                   <button
-                    onClick={() => setLoginModalOpen(true)}
+                    onClick={() => setAuthModalOpen(true)}
                     className="text-sm font-medium px-4 py-2 transition-colors duration-300"
                     style={{ 
                       backgroundColor: 'var(--accent-primary)',
@@ -120,10 +120,10 @@ export const Header = () => {
         </div>
       </header>
 
-      {/* Login Modal */}
-      <LoginModal 
-        isOpen={loginModalOpen} 
-        onClose={() => setLoginModalOpen(false)} 
+      {/* Auth Modal */}
+      <AuthModal 
+        isOpen={authModalOpen} 
+        onClose={() => setAuthModalOpen(false)} 
       />
     </>
   );
