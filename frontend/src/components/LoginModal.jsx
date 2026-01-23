@@ -173,7 +173,7 @@ export const LoginModal = ({ isOpen, onClose }) => {
                 className="text-xs text-center"
                 style={{ color: 'var(--text-muted)' }}
               >
-                We'll send you a link to log in — no password needed.
+                We&apos;ll send you a link to log in — no password needed.
               </p>
             </form>
           )}
