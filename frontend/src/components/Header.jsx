@@ -1,77 +1,130 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
+import { LoginModal } from './LoginModal';
 
 export const Header = () => {
   const location = useLocation();
+  const { user, loading, signOut } = useAuth();
+  const [loginModalOpen, setLoginModalOpen] = useState(false);
+
+  const handleLogout = async () => {
+    await signOut();
+  };
   
   return (
-    <header 
-      className="fixed top-0 left-0 right-0 z-40"
-      style={{ 
-        backgroundColor: 'var(--bg-primary)', 
-        borderBottom: '1px solid var(--border-color)' 
-      }}
-    >
-      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo - Routes to Home */}
-          <Link 
-            to="/"
-            className="flex items-center gap-1"
-          >
-            <span className="text-xl md:text-2xl font-bold">
-              <span style={{ color: 'var(--text-primary)' }}>The </span>
-              <span 
+    <>
+      <header 
+        className="fixed top-0 left-0 right-0 z-40"
+        style={{ 
+          backgroundColor: 'var(--bg-primary)', 
+          borderBottom: '1px solid var(--border-color)' 
+        }}
+      >
+        <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
+          <div className="flex items-center justify-between h-16 md:h-20">
+            {/* Logo - Routes to Home */}
+            <Link 
+              to="/"
+              className="flex items-center gap-1"
+            >
+              <span className="text-xl md:text-2xl font-bold">
+                <span style={{ color: 'var(--text-primary)' }}>The </span>
+                <span 
+                  style={{ 
+                    color: 'var(--accent-primary)',
+                    textShadow: '0 0 20px rgba(24, 198, 232, 0.4)'
+                  }}
+                >
+                  Integrity
+                </span>
+                <span style={{ color: 'var(--text-primary)' }}>Labs</span>
+              </span>
+            </Link>
+            
+            {/* Navigation */}
+            <nav className="flex items-center gap-6 md:gap-8">
+              <Link 
+                to="/baseline"
+                className="hidden md:block text-sm font-medium transition-colors duration-300"
                 style={{ 
-                  color: 'var(--accent-primary)',
-                  textShadow: '0 0 20px rgba(24, 198, 232, 0.4)'
+                  color: location.pathname === '/baseline' || location.pathname === '/forge' 
+                    ? 'var(--text-primary)' 
+                    : 'var(--text-secondary)' 
+                }}
+                onMouseEnter={(e) => e.target.style.color = 'var(--text-primary)'}
+                onMouseLeave={(e) => {
+                  if (location.pathname !== '/baseline' && location.pathname !== '/forge') {
+                    e.target.style.color = 'var(--text-secondary)';
+                  }
                 }}
               >
-                Integrity
-              </span>
-              <span style={{ color: 'var(--text-primary)' }}>Labs</span>
-            </span>
-          </Link>
-          
-          {/* Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            <Link 
-              to="/baseline"
-              className="text-sm font-medium transition-colors duration-300"
-              style={{ 
-                color: location.pathname === '/baseline' || location.pathname === '/forge' 
-                  ? 'var(--text-primary)' 
-                  : 'var(--text-secondary)' 
-              }}
-              onMouseEnter={(e) => e.target.style.color = 'var(--text-primary)'}
-              onMouseLeave={(e) => {
-                if (location.pathname !== '/baseline' && location.pathname !== '/forge') {
-                  e.target.style.color = 'var(--text-secondary)';
-                }
-              }}
-            >
-              Baseline
-            </Link>
-            <Link 
-              to="/makerspace"
-              className="text-sm font-medium transition-colors duration-300"
-              style={{ 
-                color: location.pathname === '/makerspace' 
-                  ? 'var(--text-primary)' 
-                  : 'var(--text-secondary)' 
-              }}
-              onMouseEnter={(e) => e.target.style.color = 'var(--text-primary)'}
-              onMouseLeave={(e) => {
-                if (location.pathname !== '/makerspace') {
-                  e.target.style.color = 'var(--text-secondary)';
-                }
-              }}
-            >
-              Makerspace
-            </Link>
-          </nav>
+                Baseline
+              </Link>
+              <Link 
+                to="/makerspace"
+                className="hidden md:block text-sm font-medium transition-colors duration-300"
+                style={{ 
+                  color: location.pathname === '/makerspace' 
+                    ? 'var(--text-primary)' 
+                    : 'var(--text-secondary)' 
+                }}
+                onMouseEnter={(e) => e.target.style.color = 'var(--text-primary)'}
+                onMouseLeave={(e) => {
+                  if (location.pathname !== '/makerspace') {
+                    e.target.style.color = 'var(--text-secondary)';
+                  }
+                }}
+              >
+                Makerspace
+              </Link>
+
+              {/* Auth Button */}
+              {!loading && (
+                user ? (
+                  <button
+                    onClick={handleLogout}
+                    className="text-sm font-medium px-4 py-2 transition-colors duration-300"
+                    style={{ 
+                      color: 'var(--text-secondary)',
+                      border: '1px solid var(--border-color)'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.color = 'var(--text-primary)';
+                      e.currentTarget.style.borderColor = 'var(--text-muted)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.color = 'var(--text-secondary)';
+                      e.currentTarget.style.borderColor = 'var(--border-color)';
+                    }}
+                  >
+                    Logout
+                  </button>
+                ) : (
+                  <button
+                    onClick={() => setLoginModalOpen(true)}
+                    className="text-sm font-medium px-4 py-2 transition-colors duration-300"
+                    style={{ 
+                      backgroundColor: 'var(--accent-primary)',
+                      color: 'var(--bg-primary)'
+                    }}
+                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#20d4f5'}
+                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--accent-primary)'}
+                  >
+                    Login
+                  </button>
+                )
+              )}
+            </nav>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+
+      {/* Login Modal */}
+      <LoginModal 
+        isOpen={loginModalOpen} 
+        onClose={() => setLoginModalOpen(false)} 
+      />
+    </>
   );
 };
