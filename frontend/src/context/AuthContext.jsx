@@ -33,13 +33,17 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const signInWithEmail = async (email) => {
-    const { error } = await supabase.auth.signInWithOtp({
-      email,
-      options: {
-        emailRedirectTo: window.location.origin,
-      },
-    });
-    return { error };
+    try {
+      const { error } = await supabase.auth.signInWithOtp({
+        email,
+        options: {
+          emailRedirectTo: window.location.origin,
+        },
+      });
+      return { error };
+    } catch (err) {
+      return { error: { message: err.message || 'An unexpected error occurred' } };
+    }
   };
 
   const signOut = async () => {
