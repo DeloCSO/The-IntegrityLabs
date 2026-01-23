@@ -99,7 +99,7 @@ export const MakerspaceModal = ({ isOpen, onClose, onBack }) => {
             className="text-base font-semibold mb-4"
             style={{ color: 'var(--text-primary)' }}
           >
-            What You'll Experience
+            What You&apos;ll Experience
           </h4>
           <ul className="space-y-3">
             {[
