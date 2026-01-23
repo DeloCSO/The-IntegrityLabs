@@ -1,6 +1,9 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
-export const Header = ({ onHomeClick, onStudentClick, onFounderClick }) => {
+export const Header = () => {
+  const location = useLocation();
+  
   return (
     <header 
       className="fixed top-0 left-0 right-0 z-40"
@@ -11,10 +14,10 @@ export const Header = ({ onHomeClick, onStudentClick, onFounderClick }) => {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo - Acts as HOME button */}
-          <button 
-            onClick={onHomeClick}
-            className="flex items-center gap-1 cursor-pointer bg-transparent border-none"
+          {/* Logo - Routes to Home */}
+          <Link 
+            to="/"
+            className="flex items-center gap-1"
           >
             <span className="text-xl md:text-2xl font-bold">
               <span style={{ color: 'var(--text-primary)' }}>The </span>
@@ -28,28 +31,44 @@ export const Header = ({ onHomeClick, onStudentClick, onFounderClick }) => {
               </span>
               <span style={{ color: 'var(--text-primary)' }}>Labs</span>
             </span>
-          </button>
+          </Link>
           
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <button 
-              onClick={onStudentClick}
-              className="text-sm font-medium transition-colors duration-300 bg-transparent border-none cursor-pointer"
-              style={{ color: 'var(--text-secondary)' }}
+            <Link 
+              to="/baseline"
+              className="text-sm font-medium transition-colors duration-300"
+              style={{ 
+                color: location.pathname === '/baseline' || location.pathname === '/forge' 
+                  ? 'var(--text-primary)' 
+                  : 'var(--text-secondary)' 
+              }}
               onMouseEnter={(e) => e.target.style.color = 'var(--text-primary)'}
-              onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
+              onMouseLeave={(e) => {
+                if (location.pathname !== '/baseline' && location.pathname !== '/forge') {
+                  e.target.style.color = 'var(--text-secondary)';
+                }
+              }}
             >
-              For Students
-            </button>
-            <button 
-              onClick={onFounderClick}
-              className="text-sm font-medium transition-colors duration-300 bg-transparent border-none cursor-pointer"
-              style={{ color: 'var(--text-secondary)' }}
+              Baseline
+            </Link>
+            <Link 
+              to="/makerspace"
+              className="text-sm font-medium transition-colors duration-300"
+              style={{ 
+                color: location.pathname === '/makerspace' 
+                  ? 'var(--text-primary)' 
+                  : 'var(--text-secondary)' 
+              }}
               onMouseEnter={(e) => e.target.style.color = 'var(--text-primary)'}
-              onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
+              onMouseLeave={(e) => {
+                if (location.pathname !== '/makerspace') {
+                  e.target.style.color = 'var(--text-secondary)';
+                }
+              }}
             >
-              For Founders
-            </button>
+              Makerspace
+            </Link>
           </nav>
         </div>
       </div>
