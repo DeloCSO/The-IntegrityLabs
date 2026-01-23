@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { siteData } from '../data/mock';
 
-export const HeroSection = ({ onCtaClick }) => {
+export const HeroSection = () => {
   const { hero } = siteData;
   
   return (
@@ -36,14 +37,14 @@ export const HeroSection = ({ onCtaClick }) => {
           ))}
         </div>
         
-        {/* Primary CTA - Opens Modal */}
-        <button 
-          onClick={onCtaClick}
+        {/* Primary CTA - Routes to Baseline */}
+        <Link 
+          to="/baseline"
           className="btn-primary inline-flex"
         >
           {hero.primaryCta.text}
           <ArrowRight size={18} />
-        </button>
+        </Link>
       </div>
     </section>
   );
