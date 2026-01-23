@@ -52,7 +52,7 @@ export const MakerspaceModal = ({ isOpen, onClose, onBack }) => {
               This is not a course, cohort, or accelerator.
             </span>
             <br />
-            Makerspace is a focused event designed to help founders validate, refine, and stress-test what they're building.
+            Makerspace is a focused event designed to help founders validate, refine, and stress-test what they&apos;re building.
           </p>
         </section>
         
