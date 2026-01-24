@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
+import { MakerspaceTimeline } from '../components/MakerspaceTimeline';
 
 const MakerspacePage = () => {
   // Open Google Form in new tab
