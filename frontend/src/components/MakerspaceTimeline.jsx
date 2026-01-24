@@ -21,7 +21,7 @@ export const MakerspaceTimeline = () => {
     {
       label: '04',
       title: 'Working Conversations',
-      description: 'Real discussions about product, market, and judgment. Interest continues or it doesn't.'
+      description: "Real discussions about product, market, and judgment. Interest continues or it doesn't."
     },
     {
       label: '05',
