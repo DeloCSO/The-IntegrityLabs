@@ -163,6 +163,17 @@ const MakerspacePage = () => {
               </p>
             </section>
             
+            {/* Timeline Infographic */}
+            <section 
+              className="p-5"
+              style={{ 
+                backgroundColor: 'var(--bg-surface)',
+                border: '1px solid var(--border-color)'
+              }}
+            >
+              <MakerspaceTimeline />
+            </section>
+            
             {/* 6. Primary CTA */}
             <div className="pt-6 mt-4" style={{ borderTop: '1px solid var(--border-color)' }}>
               <button
