@@ -5,10 +5,11 @@ import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { MakerspaceTimeline } from '../components/MakerspaceTimeline';
 
+const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfiMV_Fh8Anijt0xWD8e-InD9RfCBcdMJ-RhJoUP4OMg-6BeA/viewform?usp=header';
+
 const MakerspacePage = () => {
-  // Open Google Form in new tab
   const handleApply = () => {
-    window.open('https://forms.google.com/makerspace-apply', '_blank', 'noopener,noreferrer');
+    window.open(GOOGLE_FORM_URL, '_blank', 'noopener,noreferrer');
   };
   
   return (
@@ -18,7 +19,7 @@ const MakerspacePage = () => {
     >
       <Header />
       <main className="flex-grow pt-20 md:pt-24">
-        <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12 py-12 md:py-16">
+        <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 py-12 md:py-16">
           {/* Back to Home */}
           <Link 
             to="/"
@@ -31,164 +32,168 @@ const MakerspacePage = () => {
             Back to Home
           </Link>
           
-          <div className="space-y-8">
-            {/* 1. Title & Qualifier */}
-            <section>
-              <h1 className="text-display mb-2">
-                <span style={{ color: 'var(--text-primary)' }}>Makerspace</span>
-              </h1>
-              <p 
-                className="text-body-lg mb-3"
-                style={{ color: 'var(--accent-primary)' }}
+          {/* Two-Column Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+            {/* Left Column - Content */}
+            <div className="space-y-8">
+              {/* Title & Qualifier */}
+              <section>
+                <h1 className="text-display mb-2">
+                  <span style={{ color: 'var(--text-primary)' }}>Makerspace</span>
+                </h1>
+                <p 
+                  className="text-body-lg mb-3"
+                  style={{ color: 'var(--accent-primary)' }}
+                >
+                  A Curated Founder Event
+                </p>
+                <p 
+                  className="text-sm"
+                  style={{ color: 'var(--text-muted)' }}
+                >
+                  Limited capacity · Application-based · Built for serious builders
+                </p>
+              </section>
+              
+              {/* Clarity Statement */}
+              <section 
+                className="p-5"
+                style={{ 
+                  backgroundColor: 'var(--bg-surface)',
+                  border: '1px solid var(--border-color)'
+                }}
               >
-                A Curated Founder Event by The IntegrityLabs
-              </p>
-              <p 
-                className="text-sm"
-                style={{ color: 'var(--text-muted)' }}
+                <p 
+                  className="text-body"
+                  style={{ color: 'var(--text-secondary)' }}
+                >
+                  <span style={{ color: 'var(--text-primary)', fontWeight: 500 }}>
+                    This is not a course, cohort, or accelerator.
+                  </span>
+                  <br />
+                  Makerspace is a focused event designed to help founders validate, refine, and stress-test what they&apos;re building.
+                </p>
+              </section>
+              
+              {/* Who This Event Is For */}
+              <section>
+                <h2 
+                  className="text-base font-semibold mb-4"
+                  style={{ color: 'var(--text-primary)' }}
+                >
+                  Who This Event Is For
+                </h2>
+                <p 
+                  className="text-body mb-4"
+                  style={{ color: 'var(--text-secondary)' }}
+                >
+                  Makerspace is for founders who are:
+                </p>
+                <ul className="space-y-3">
+                  {[
+                    'Exploring an idea or early concept',
+                    'Building an MVP or early product',
+                    'Running a revenue-generating startup seeking clarity, validation, or next-stage direction',
+                    'Based in tier-2 or tier-3 cities or outside traditional startup ecosystems',
+                    'Looking for honest feedback and access — not surface-level networking'
+                  ].map((item, index) => (
+                    <li 
+                      key={index}
+                      className="flex items-start gap-3 text-body"
+                      style={{ color: 'var(--text-secondary)' }}
+                    >
+                      <span 
+                        className="mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0"
+                        style={{ backgroundColor: 'var(--accent-primary)' }}
+                      />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+              
+              {/* What You'll Experience */}
+              <section>
+                <h2 
+                  className="text-base font-semibold mb-4"
+                  style={{ color: 'var(--text-primary)' }}
+                >
+                  What You&apos;ll Experience
+                </h2>
+                <ul className="space-y-3">
+                  {[
+                    'Product and idea validation sessions',
+                    'Structured peer and operator feedback',
+                    'Pitch and narrative refinement conversations',
+                    'Exposure to founders, operators, and potential investors',
+                    'A safe environment to test ideas without public failure'
+                  ].map((item, index) => (
+                    <li 
+                      key={index}
+                      className="flex items-start gap-3 text-body"
+                      style={{ color: 'var(--text-secondary)' }}
+                    >
+                      <span 
+                        className="mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0"
+                        style={{ backgroundColor: 'var(--accent-muted)' }}
+                      />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+              
+              {/* Capital Honesty */}
+              <section 
+                className="p-5"
+                style={{ 
+                  backgroundColor: 'var(--bg-surface)',
+                  border: '1px solid var(--border-color)'
+                }}
               >
-                Limited capacity · Application-based · Built for serious builders
-              </p>
-            </section>
+                <p 
+                  className="text-body mb-3"
+                  style={{ color: 'var(--text-primary)', fontWeight: 500 }}
+                >
+                  Funding is not guaranteed.
+                </p>
+                <p 
+                  className="text-body"
+                  style={{ color: 'var(--text-muted)' }}
+                >
+                  Makerspace focuses on preparation, clarity, and access.
+                  <br />
+                  Investment opportunities emerge from conversations — not promises or certificates.
+                </p>
+              </section>
+              
+              {/* CTA */}
+              <div className="pt-6" style={{ borderTop: '1px solid var(--border-color)' }}>
+                <button
+                  onClick={handleApply}
+                  className="w-full px-6 py-4 text-base font-semibold flex items-center justify-center gap-2 transition-colors duration-300"
+                  style={{ 
+                    backgroundColor: 'var(--accent-primary)',
+                    color: 'var(--bg-primary)'
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#20d4f5'}
+                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--accent-primary)'}
+                >
+                  Apply for the Makerspace Event
+                  <ArrowRight size={18} />
+                </button>
+              </div>
+            </div>
             
-            {/* 2. Immediate Clarity Statement */}
-            <section 
-              className="p-5"
-              style={{ 
-                backgroundColor: 'var(--bg-surface)',
-                border: '1px solid var(--border-color)'
-              }}
-            >
-              <p 
-                className="text-body"
-                style={{ color: 'var(--text-secondary)' }}
-              >
-                <span style={{ color: 'var(--text-primary)', fontWeight: 500 }}>
-                  This is not a course, cohort, or accelerator.
-                </span>
-                <br />
-                Makerspace is a focused event designed to help founders validate, refine, and stress-test what they&apos;re building.
-              </p>
-            </section>
-            
-            {/* 3. Who This Event Is For */}
-            <section>
-              <h2 
-                className="text-base font-semibold mb-4"
-                style={{ color: 'var(--text-primary)' }}
-              >
-                Who This Event Is For
-              </h2>
-              <p 
-                className="text-body mb-4"
-                style={{ color: 'var(--text-secondary)' }}
-              >
-                Makerspace is for founders who are:
-              </p>
-              <ul className="space-y-3">
-                {[
-                  'Exploring an idea or early concept',
-                  'Building an MVP or early product',
-                  'Running a revenue-generating startup seeking clarity, validation, or next-stage direction',
-                  'Based in tier-2 or tier-3 cities or outside traditional startup ecosystems',
-                  'Looking for honest feedback and access — not surface-level networking'
-                ].map((item, index) => (
-                  <li 
-                    key={index}
-                    className="flex items-start gap-3 text-body"
-                    style={{ color: 'var(--text-secondary)' }}
-                  >
-                    <span 
-                      className="mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0"
-                      style={{ backgroundColor: 'var(--accent-primary)' }}
-                    />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </section>
-            
-            {/* 4. What You'll Experience */}
-            <section>
-              <h2 
-                className="text-base font-semibold mb-4"
-                style={{ color: 'var(--text-primary)' }}
-              >
-                What You&apos;ll Experience
-              </h2>
-              <ul className="space-y-3">
-                {[
-                  'Product and idea validation sessions',
-                  'Structured peer and operator feedback',
-                  'Pitch and narrative refinement conversations',
-                  'Exposure to founders, operators, and potential investors',
-                  'A safe environment to test ideas without public failure'
-                ].map((item, index) => (
-                  <li 
-                    key={index}
-                    className="flex items-start gap-3 text-body"
-                    style={{ color: 'var(--text-secondary)' }}
-                  >
-                    <span 
-                      className="mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0"
-                      style={{ backgroundColor: 'var(--accent-muted)' }}
-                    />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </section>
-            
-            {/* 5. Capital Honesty */}
-            <section 
-              className="p-5"
-              style={{ 
-                backgroundColor: 'var(--bg-surface)',
-                border: '1px solid var(--border-color)'
-              }}
-            >
-              <p 
-                className="text-body mb-3"
-                style={{ color: 'var(--text-primary)', fontWeight: 500 }}
-              >
-                Funding is not guaranteed.
-              </p>
-              <p 
-                className="text-body"
-                style={{ color: 'var(--text-muted)' }}
-              >
-                Makerspace focuses on preparation, clarity, and access.
-                <br />
-                Investment opportunities emerge from conversations — not promises or certificates.
-              </p>
-            </section>
-            
-            {/* Timeline Infographic */}
-            <section 
-              className="p-5"
+            {/* Right Column - Visual */}
+            <div 
+              className="p-6 lg:p-8 h-fit lg:sticky lg:top-28"
               style={{ 
                 backgroundColor: 'var(--bg-surface)',
                 border: '1px solid var(--border-color)'
               }}
             >
               <MakerspaceTimeline />
-            </section>
-            
-            {/* 6. Primary CTA */}
-            <div className="pt-6 mt-4" style={{ borderTop: '1px solid var(--border-color)' }}>
-              <button
-                onClick={handleApply}
-                className="w-full px-6 py-4 text-base font-semibold flex items-center justify-center gap-2 transition-colors duration-300"
-                style={{ 
-                  backgroundColor: 'var(--accent-primary)',
-                  color: 'var(--bg-primary)'
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#20d4f5'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--accent-primary)'}
-              >
-                Apply for the Makerspace Event
-                <ArrowRight size={18} />
-              </button>
             </div>
           </div>
         </div>
