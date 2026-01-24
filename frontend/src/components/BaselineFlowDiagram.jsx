@@ -10,7 +10,7 @@ export const BaselineFlowDiagram = () => {
     {
       label: '02',
       title: 'Direction',
-      description: 'Understand what matters and what doesn't.'
+      description: "Understand what matters and what doesn't."
     },
     {
       label: '03',
