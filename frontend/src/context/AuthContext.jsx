@@ -10,6 +10,13 @@ export const useAuth = () => {
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+useEffect(() => {
+  if (!supabase) {
+    setLoading(false);
+    return;
+  }
+  // existing logic
+}, []);
 
   useEffect(() => {
     // Get initial session
