@@ -121,6 +121,17 @@ const BaselinePage = () => {
               </p>
             </section>
             
+            {/* Flow Diagram */}
+            <section 
+              className="p-5"
+              style={{ 
+                backgroundColor: 'var(--bg-surface)',
+                border: '1px solid var(--border-color)'
+              }}
+            >
+              <BaselineFlowDiagram />
+            </section>
+            
             {/* 5. Who This Is For */}
             <section>
               <h2 
