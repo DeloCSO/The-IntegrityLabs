@@ -5,142 +5,93 @@ export const MakerspaceTimeline = () => {
     {
       number: 1,
       title: 'Application & Selection',
-      description: 'Founders apply with their idea or product. We review for fit, commitment, and readiness.'
+      description: 'Founders apply with a real idea, product, or early traction. Selections are based on clarity of thinking, execution intent, and readiness to engage — not pitch polish.',
+      note: 'This is not open admission. It is a curated room.'
     },
     {
       number: 2,
-      title: 'Preparation Phase',
-      description: 'Selected founders receive structured guidance to refine their pitch, product narrative, and positioning.'
+      title: 'Pre-Event Preparation',
+      description: 'Selected founders go through a focused preparation phase. This includes sharpening the problem and solution narrative, stress-testing assumptions with operators, and refining what actually matters.',
+      note: 'The goal is not perfection. It is honesty and preparedness.'
     },
     {
       number: 3,
-      title: 'Feedback & Validation',
-      description: 'Present to peers, operators, and mentors. Receive structured feedback on product and pitch.'
+      title: 'Live Makerspace Sessions',
+      description: 'Founders present and discuss their product with experienced operators, active investors, and builders who have scaled or shut down companies. Feedback is direct, specific, and unfiltered.',
+      note: 'Expect questions, pushback, and real-world perspectives — not applause.',
+      isCore: true
     },
     {
       number: 4,
-      title: 'Investor Sessions',
-      description: 'Participate in sessions with potential investors. Practice pitching in realistic conditions.'
+      title: 'Investor & Operator Interactions',
+      description: 'Some sessions include investors who are actively evaluating ideas. These are working conversations around product clarity, market reality, and founder judgment.',
+      note: 'If interest exists, conversations continue. If not, founders still leave with concrete insight.'
     },
     {
       number: 5,
-      title: 'Outcome & Next Steps',
-      description: 'Leave with clarity, refined materials, and potential follow-up conversations — not promises.'
+      title: 'Outcomes & Follow-Ups',
+      description: 'Founders leave with clear next steps, refined positioning and materials, and honest signal on where they stand. In some cases, this may lead to follow-up investor discussions or funding conversations.',
+      note: 'Nothing is promised. Everything is earned.'
     }
   ];
 
   return (
-    <div className="py-8">
+    <div className="py-4">
       <h3 
         className="text-base font-semibold mb-8 text-center"
         style={{ color: 'var(--text-primary)' }}
       >
-        How the Makerspace Event Works
+        How the Makerspace Event Actually Works
       </h3>
       
       {/* Timeline Container */}
-      <div className="relative max-w-2xl mx-auto">
-        {/* Vertical Line - Desktop */}
+      <div className="relative">
+        {/* Vertical Line */}
         <div 
-          className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px -translate-x-1/2"
-          style={{ backgroundColor: 'var(--border-color)' }}
-        />
-        
-        {/* Vertical Line - Mobile */}
-        <div 
-          className="md:hidden absolute left-5 top-0 bottom-0 w-px"
+          className="absolute left-5 md:left-6 top-0 bottom-0 w-px"
           style={{ backgroundColor: 'var(--border-color)' }}
         />
         
         {/* Steps */}
-        <div className="space-y-8 md:space-y-12">
+        <div className="space-y-6">
           {steps.map((step, index) => (
             <div 
               key={index}
-              className={`relative flex items-start gap-4 md:gap-8 ${
-                index % 2 === 0 
-                  ? 'md:flex-row' 
-                  : 'md:flex-row-reverse'
-              }`}
+              className="relative flex items-start gap-4 md:gap-6"
             >
-              {/* Number Badge - Mobile */}
+              {/* Number Badge */}
               <div 
-                className="md:hidden w-10 h-10 flex items-center justify-center flex-shrink-0 z-10"
+                className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center flex-shrink-0 z-10"
                 style={{ 
-                  backgroundColor: 'var(--bg-surface)',
-                  border: '1px solid var(--accent-primary)',
-                  color: 'var(--accent-primary)'
+                  backgroundColor: step.isCore ? 'var(--accent-primary)' : 'var(--bg-surface)',
+                  border: step.isCore ? 'none' : '1px solid var(--accent-primary)',
+                  color: step.isCore ? 'var(--bg-primary)' : 'var(--accent-primary)'
                 }}
               >
                 <span className="text-sm font-bold">{step.number}</span>
               </div>
               
-              {/* Content - Mobile */}
-              <div className="md:hidden flex-1">
+              {/* Content */}
+              <div className="flex-1 pb-2">
                 <p 
-                  className="text-sm font-semibold mb-1"
+                  className="text-sm font-semibold mb-2"
                   style={{ color: 'var(--text-primary)' }}
                 >
                   {step.title}
                 </p>
                 <p 
-                  className="text-xs"
-                  style={{ color: 'var(--text-muted)' }}
+                  className="text-xs mb-2"
+                  style={{ color: 'var(--text-secondary)' }}
                 >
                   {step.description}
                 </p>
-              </div>
-              
-              {/* Desktop Layout */}
-              <div className={`hidden md:flex items-start gap-6 w-full ${
-                index % 2 === 0 ? 'justify-end' : 'justify-start'
-              }`}>
-                {/* Left Content (even steps) */}
-                {index % 2 === 0 && (
-                  <div className="w-5/12 text-right pr-4">
-                    <p 
-                      className="text-sm font-semibold mb-1"
-                      style={{ color: 'var(--text-primary)' }}
-                    >
-                      {step.title}
-                    </p>
-                    <p 
-                      className="text-xs"
-                      style={{ color: 'var(--text-muted)' }}
-                    >
-                      {step.description}
-                    </p>
-                  </div>
-                )}
-                
-                {/* Number Badge - Desktop */}
-                <div 
-                  className="absolute left-1/2 -translate-x-1/2 w-10 h-10 flex items-center justify-center z-10"
-                  style={{ 
-                    backgroundColor: 'var(--bg-surface)',
-                    border: '1px solid var(--accent-primary)',
-                    color: 'var(--accent-primary)'
-                  }}
-                >
-                  <span className="text-sm font-bold">{step.number}</span>
-                </div>
-                
-                {/* Right Content (odd steps) */}
-                {index % 2 !== 0 && (
-                  <div className="w-5/12 text-left pl-4">
-                    <p 
-                      className="text-sm font-semibold mb-1"
-                      style={{ color: 'var(--text-primary)' }}
-                    >
-                      {step.title}
-                    </p>
-                    <p 
-                      className="text-xs"
-                      style={{ color: 'var(--text-muted)' }}
-                    >
-                      {step.description}
-                    </p>
-                  </div>
+                {step.note && (
+                  <p 
+                    className="text-xs italic"
+                    style={{ color: 'var(--text-muted)' }}
+                  >
+                    {step.note}
+                  </p>
                 )}
               </div>
             </div>
