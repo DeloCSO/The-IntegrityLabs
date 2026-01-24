@@ -182,13 +182,7 @@ const BaselinePage = () => {
             </div>
             
             {/* Right Column - Visual */}
-            <div 
-              className="p-6 lg:p-8 h-fit lg:sticky lg:top-28"
-              style={{ 
-                backgroundColor: 'var(--bg-surface)',
-                border: '1px solid var(--border-color)'
-              }}
-            >
+            <div className="lg:sticky lg:top-28 h-fit">
               <BaselineFlowDiagram />
             </div>
           </div>
