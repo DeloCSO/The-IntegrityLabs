@@ -4,6 +4,7 @@ import { ArrowRight, ArrowLeft } from 'lucide-react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { ApplyModal } from '../components/ApplyModal';
+import { BaselineFlowDiagram } from '../components/BaselineFlowDiagram';
 
 const BaselinePage = () => {
   const [applyModalOpen, setApplyModalOpen] = useState(false);
