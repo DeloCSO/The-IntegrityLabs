@@ -10,7 +10,7 @@ export const MakerspaceTimeline = () => {
     {
       label: '02',
       title: 'Preparation',
-      description: 'Sharpen your narrative. Stress-test assumptions. Get honest before the room.'
+      description: 'Sharpen your narrative. Stress-test assumptions. Prepare before the room.'
     },
     {
       label: '03',
@@ -21,7 +21,7 @@ export const MakerspaceTimeline = () => {
     {
       label: '04',
       title: 'Working Conversations',
-      description: "Real discussions about product, market, and judgment. Interest continues or it doesn't."
+      description: "Real discussions about product, market, and judgment. Interest follows, or it does not."
     },
     {
       label: '05',

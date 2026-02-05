@@ -71,7 +71,7 @@ const MakerspacePage = () => {
                     This is not a course, cohort, or accelerator.
                   </span>
                   <br />
-                  Makerspace is a focused event designed to help founders validate, refine, and stress-test what they&apos;re building.
+                  Makerspace is a focused event designed to help founders validate, refine, and stress-test what they are building.
                 </p>
               </section>
               
@@ -118,7 +118,7 @@ const MakerspacePage = () => {
                   className="text-base font-semibold mb-4"
                   style={{ color: 'var(--text-primary)' }}
                 >
-                  What You&apos;ll Experience
+                  What Happens
                 </h2>
                 <ul className="space-y-3">
                   {[
@@ -126,7 +126,7 @@ const MakerspacePage = () => {
                     'Structured peer and operator feedback',
                     'Pitch and narrative refinement conversations',
                     'Exposure to founders, operators, and potential investors',
-                    'A safe environment to test ideas without public failure'
+                    'A private environment to test ideas before public exposure'
                   ].map((item, index) => (
                     <li 
                       key={index}
@@ -163,7 +163,7 @@ const MakerspacePage = () => {
                 >
                   Makerspace focuses on preparation, clarity, and access.
                   <br />
-                  Investment opportunities emerge from conversations — not promises or certificates.
+                  Investment opportunities emerge from conversations, not promises.
                 </p>
               </section>
               
