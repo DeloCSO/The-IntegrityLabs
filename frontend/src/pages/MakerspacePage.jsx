@@ -5,7 +5,7 @@ import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { MakerspaceTimeline } from '../components/MakerspaceTimeline';
 
-const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfiMV_Fh8Anijt0xWD8e-InD9RfCBcdMJ-RhJoUP4OMg-6BeA/viewform?usp=header';
+const GOOGLE_FORM_URL = 'https://forms.gle/SoN8vhHMTynxMc6e6';
 
 const MakerspacePage = () => {
   const handleApply = () => {

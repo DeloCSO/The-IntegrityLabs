@@ -8,7 +8,7 @@ export const BaselineFlowDiagram = () => {
         className="text-lg font-semibold mb-2"
         style={{ color: 'var(--text-primary)' }}
       >
-        How Clarity Actually Forms
+        How Clarity Forms
       </h3>
       <p 
         className="text-sm mb-8"
@@ -41,7 +41,7 @@ export const BaselineFlowDiagram = () => {
             style={{ color: 'var(--text-secondary)' }}
           >
             Most platforms sell answers.<br />
-            Baseline starts earlier — by helping you talk to people who've actually done the work, before you decide what's worth learning at all.
+            Baseline starts earlier, by helping you talk to people who have done the work, before you decide what is worth learning at all.
           </p>
           <p 
             className="text-xs"
@@ -73,7 +73,7 @@ export const BaselineFlowDiagram = () => {
             style={{ color: 'var(--text-secondary)' }}
           >
             Courses assume you already know what you need.<br />
-            Baseline exists for the stage before that — when the real problem is deciding what matters and what can be safely ignored.
+            Baseline exists for the stage before that, when the problem is deciding what matters and what can be safely ignored.
           </p>
           <p 
             className="text-xs"
@@ -104,7 +104,7 @@ export const BaselineFlowDiagram = () => {
             className="text-sm mb-3"
             style={{ color: 'var(--text-secondary)' }}
           >
-            Sometimes the right outcome is going deeper.<br />
+            Sometimes the outcome is going deeper.<br />
             Sometimes it's realizing you shouldn't — yet.<br />
             Baseline is designed to make both conclusions acceptable.
           </p>

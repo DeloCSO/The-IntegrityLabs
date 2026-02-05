@@ -5,7 +5,7 @@ import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { BaselineFlowDiagram } from '../components/BaselineFlowDiagram';
 
-const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfiMV_Fh8Anijt0xWD8e-InD9RfCBcdMJ-RhJoUP4OMg-6BeA/viewform?usp=header';
+const GOOGLE_FORM_URL = 'https://forms.gle/tBZJ7qPMt9HHUM636';
 
 const BaselinePage = () => {
   const handleStartConversation = () => {
@@ -65,7 +65,7 @@ const BaselinePage = () => {
                     This is not a course or a cohort.
                   </span>
                   <br /><br />
-                  The Student Community exists to help you talk to the right people, ask better questions, and understand what skills actually matter before committing time or money.
+                  The Student Community exists to help you talk to the right people, ask better questions, and understand what skills matter before committing time or money.
                 </p>
               </section>
               
@@ -85,7 +85,7 @@ const BaselinePage = () => {
                 </p>
                 <ul className="space-y-3">
                   {[
-                    "Talk to mentors and professionals who've worked in the field",
+                    "Talk to mentors and professionals who have worked in the field",
                     'Get direction on what to learn and what to ignore',
                     'Access curated resources and real-world perspectives',
                     'Explore whether working on a project together even makes sense'
@@ -146,7 +146,7 @@ const BaselinePage = () => {
                     'Want clarity before committing to paid programs',
                     'Care more about real skills than certificates',
                     'Are willing to learn through conversation and exploration',
-                    'May choose to build projects later — but only if it feels right'
+                    'May choose to build projects later, but only if it makes sense'
                   ].map((item, index) => (
                     <li 
                       key={index}
