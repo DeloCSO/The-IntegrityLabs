@@ -6,9 +6,9 @@ export const siteData = {
   hero: {
     headline: "A space for people who build and learn seriously",
     supportingLine: "For students seeking clarity. For founders seeking honesty.",
-    description: "The IntegrityLabs is a small, focused environment where students can talk to people who've actually done the work — and where founders can get real feedback without the noise.\n\nWe're not a course platform. We're not a networking community. We exist because most spaces meant to help people grow are either too crowded, too transactional, or too shallow to be useful.",
+    description: "IntegrityLabs is a small, focused environment where students can talk to people who have done the work, and where founders can get real feedback without the noise.\n\nWe are not a course platform. We are not a networking community. We exist because most spaces meant to help people grow are too crowded, too transactional, or too shallow to be useful.",
     primaryCta: {
-      text: "See what we're building",
+      text: "See what we offer",
       href: "#the-integritylabs"
     }
   },
