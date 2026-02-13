@@ -48,13 +48,13 @@ export const Header = () => {
                 to="/baseline"
                 className="hidden md:block text-sm font-medium transition-colors duration-300"
                 style={{ 
-                  color: location.pathname === '/baseline' || location.pathname === '/forge' 
+                  color: location.pathname === '/baseline'
                     ? 'var(--text-primary)' 
                     : 'var(--text-secondary)' 
                 }}
                 onMouseEnter={(e) => e.target.style.color = 'var(--text-primary)'}
                 onMouseLeave={(e) => {
-                  if (location.pathname !== '/baseline' && location.pathname !== '/forge') {
+                  if (location.pathname !== '/baseline') {
                     e.target.style.color = 'var(--text-secondary)';
                   }
                 }}
